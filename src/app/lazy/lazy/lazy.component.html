@@ -1,20 +1,21 @@
-<div>
-  <a [routerLink]="[ '/new' ]">new</a>
-  <br/>
-  <a [routerLink]="[ '/lazy' ]">lazy</a>
-</div>
+<p>lazy works!</p>
+
+
+<p>lazy works!</p>
+
 <p>
-  Start editing to see some magic happen :)
+Start editing to see some magic happen lazy :)
 </p>
-<h2>{{ message$ | async }}</h2>
+<h2>{{ message1$ | async }}</h2>
 
 <button (click)="spanishMessage()">Spanish</button>
 <button (click)="frenchMessage()">French</button>
 
-<div *ngIf="post1$ | async as p">
-  <h2>{{ p.text }}</h2>
-  <h4>Votes: {{ p.likes }}</h4>
+<div *ngIf="lazy$ | async as p">
+<h2>{{ p.text }}</h2>
+<h4>Votes: {{ p.likes }}</h4>
 </div>
+
 <br/>
 <button (click)="up()">Up</button>
 <button (click)="down()">down</button>
@@ -22,4 +23,7 @@
 <input [(ngModel)]="text" />
 <button (click)="change()">edit</button>
 
-<router-outlet></router-outlet>
+<br/>
+
+<input [(ngModel)]="strings" />
+<button (click)="addStrings()">AddString</button>
